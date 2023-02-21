@@ -2,6 +2,30 @@
 <h1>Explore o universo</h1>
 </div>
 
-<div class="buttonexplo">
-<img src="images/button.svg" alt="icone do site">
+ <div class="buttons">
+  <div class="buttonDisabled">
+<img src="images/button.svg" alt="Quero saber mais">
 </div>
+<div class="buttonEnable hide">
+<img src="images/buttonActive.svg" alt="Quero saber mais">
+</div>
+</div> 
+
+<script>
+
+
+let buttonDisabled = document.querySelector(".buttonDisabled")
+let buttonEnable = document.querySelector(".buttonEnable")
+
+  buttonEnable.addEventListener("click", function () {
+  buttonDisabled.classList.toggle("hide")
+  buttonEnable.classList.toggle("hide")
+})
+
+buttonDisabled.addEventListener("click", function (){
+  buttonDisabled.classList.toggle("hide")
+  buttonEnable.classList.toggle("hide")
+})
+
+
+</script>

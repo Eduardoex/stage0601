@@ -1,5 +1,8 @@
 import {Router} from "./router.js"
 
+// let buttonDisabled = document.querySelector(".buttonDisabled")
+// let buttonEnable = document.querySelector(".buttonEnable")
+
 const router = new Router()
 router.add("/", "/pages/home.html")
 router.add("/universe", "/pages/universe.html")
@@ -12,25 +15,14 @@ window.onpopstate = () => router.handle()
 window.route = () => router.route ()
 
 
+// buttonEnable.addEventListener("click", function () {
+//   buttonDisabled.classList.toggle("hide")
+//   buttonEnable.classList.toggle("hide")
+// })
+
+// buttonDisabled.addEventListener("click", function (){
+//   buttonDisabled.classList.toggle("hide")
+//   buttonEnable.classList.toggle("hide")
+// })
 
 
-function changeBg() {
-  const { pathname } = window.location;
-  const { body } = document;
-
-  switch (pathname) {
-    case '/exploracao':
-      body.className = 'explore';
-      break;
-
-    case '/universo':
-      body.className = 'universe';
-      break;
-
-    default:
-      body.className = '';
-      break;
-  }
-}
-
-changeBg()

@@ -21,18 +21,23 @@ a:-webkit-any-link {
 body {
   background-color: hsl(210, 100%, 7%);
   background-image: url('/images/mountains-universe1.png');
+
 }
 
-body.universe {
+.universe {
   background-image: url('/images/mountains-universe2.png');
+
 }
 
-body.explore {
+.exploration {
   background-image: url('/images/mountains-universe3.png');
+
 }
 
 
-
+.hide {
+  display: none;
+}
 
 main {
   display: flex;
@@ -96,11 +101,24 @@ line-height: 2.2rem;
   display: flex;
   justify-content: space-evenly;
   padding-top: 2.4rem;
+  
 }
 
-.universe, .exploration {
+.buttons {
+  display: flex;
+  padding-top: 2.4rem;
+  justify-content: center;
+}
+
+
+.universeh, .explorationh, .error{
 padding-top: 18.5rem;
 padding-left: 10.2rem;
+}
+
+.error {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .universe-text, .exploration-text {
@@ -113,3 +131,18 @@ padding-left: 10.2rem;
   display: none;
 }
 
+@media (max-width: 700px) { 
+  .homexplo h1 {
+    font-size: 3rem;
+  }
+
+  .universe-text, .exploration-text, .above, .universeh, .explorationh, .error  {
+    padding-left: 1rem;
+    margin-left: 1rem;
+  }
+
+ nav{
+  font-size: 1.7rem;
+ }
+
+}
